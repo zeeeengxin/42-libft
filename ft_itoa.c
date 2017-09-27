@@ -27,7 +27,6 @@ int		nb_count(int n)
 	return (c);
 }
 
-
 char	*ft_itoa(int n)
 {
 	char	*str;

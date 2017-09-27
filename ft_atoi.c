@@ -14,14 +14,14 @@
 
 int		ft_atoi(const char *str)
 {
-	size_t		i;
-	int			sign;
-	int			nb;
+	size_t			i;
+	int				sign;
+	unsigned long	nb;
 
 	i = 0;
 	sign = 1;
 	nb = 0;
-	while (str[i] == '\n' || str[i] == '\t' || str[i] == ' ' || 
+	while (str[i] == '\n' || str[i] == '\t' || str[i] == ' ' ||
 		str[i] == '\f' || str[i] == '\v' || str[i] == '\r')
 		i++;
 	if (str[i] == '-')
@@ -31,8 +31,11 @@ int		ft_atoi(const char *str)
 	while (str[i] && str[i] >= '0' && str[i] <= '9')
 	{
 		nb = nb * 10 + (str[i] - 48);
+		if (sign == -1 && nb > 9223372036854775807)
+			return (0);
+		else if (nb > 9223372036854775807)
+			return (-1);
 		i++;
 	}
 	return (nb * sign);
 }
-

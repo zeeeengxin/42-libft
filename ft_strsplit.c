@@ -19,7 +19,7 @@ static int	word_count(char *s, char c)
 
 	word_n = 0;
 	j = 0;
-	if(s[j] != c)
+	if (s[j] != c)
 	{
 		word_n++;
 	}

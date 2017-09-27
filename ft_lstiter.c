@@ -16,7 +16,7 @@ void	ft_lstiter(t_list *lst, void (*f)(t_list *elem))
 {
 	t_list	*list;
 	t_list	*tmp;
-	
+
 	if (lst == 0)
 		return ;
 	list = lst;
