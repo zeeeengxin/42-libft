@@ -1,18 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_strnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zengxin <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/09/26 16:21:59 by zengxin           #+#    #+#             */
-/*   Updated: 2017/09/26 16:22:05 by zengxin          ###   ########.fr       */
+/*   Created: 2017/09/25 17:15:10 by zengxin           #+#    #+#             */
+/*   Updated: 2017/09/25 17:15:12 by zengxin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putchar(char c)
+char	*ft_strnew(size_t size)
 {
-	write(1, &c, 1);
+	char	*new;
+	size_t	i;
+
+	i = 0;
+	new = (char *)malloc(sizeof(char) * (size + 1));
+	if (new == NULL)
+		return (NULL);
+	while (i <= size)
+	{
+		new[i] = '\0';
+		i++;
+	}
+	return (new);
 }
