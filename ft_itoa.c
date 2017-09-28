@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-int		nb_count(int n)
+static int	nb_count(int n)
 {
 	int		c;
 
@@ -27,7 +27,7 @@ int		nb_count(int n)
 	return (c);
 }
 
-char	*ft_itoa(int n)
+char		*ft_itoa(int n)
 {
 	char	*str;
 	int		i;
