@@ -5,6 +5,9 @@ Strengthen your skills learned during the C Piscine by recoding functions from t
 
 I forgot to put one of the functions’ prototype in libft.h when I submitted this project, so ...
 
+### The Norme ###
+All projects must be written in C and must be according to the Norme coding standard. See Norme.en.pdf
+
 ### 42 University @Silicon Valley ###
 
 This is one of the 42 University projects.
